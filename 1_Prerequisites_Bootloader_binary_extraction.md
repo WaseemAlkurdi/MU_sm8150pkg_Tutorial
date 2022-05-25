@@ -173,6 +173,6 @@ Extract it to a folder:
 ![7-Zip File Manager extract dialog, destination is a new folder](/img/10.png)
 
 Then **copy that folder over to your Linux computer.**  
-Once they are copied, [proceed to the next section](Build_environment_setup.md).
+Once they are copied, [proceed to the next section](2_Build_environment_setup.md).
 
 
