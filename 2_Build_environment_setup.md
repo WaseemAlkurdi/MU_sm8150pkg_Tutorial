@@ -1765,3 +1765,5 @@ Your shell prompt (known as `PS1`) will now have `(SurfaceDuo)` prepended to ind
 ```
 (SurfaceDuo) $
 ```
+
+Now, [let's add our device into the build system](3_Build_Instructions.md).

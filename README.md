@@ -6,4 +6,4 @@ Upon completion of this guide, the reader is expected to be able to build a UEFI
 
 Hope you like it!
 
-[Click here to get started!](\1_Prerequisites_Bootloader_binary_extraction.md)
+[Click here to get started!](1_Prerequisites_Bootloader_binary_extraction.md)
