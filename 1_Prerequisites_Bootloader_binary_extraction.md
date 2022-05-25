@@ -151,7 +151,7 @@ Of all these files, we need just one file: `xbl.img`. **Copy it over to the Wind
 **Once on the Windows machine**, create a new folder on your Desktop, and move the `xbl.img` file to it. 
 Then, open 7-Zip from the Start menu, then navigate to that folder:  
 
-![folder containing xbl.img open in 7-Zip File Manager on Windows](/img/0.PNG)
+![folder containing xbl.img open in 7-Zip File Manager on Windows](/img/0.png)
 
 Then, right-click the biggest file, of type gzip, and select "Open Inside #". Make sure you select the correct Open Inside option, as the other ones won't work!  
 
