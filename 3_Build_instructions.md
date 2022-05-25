@@ -71,7 +71,7 @@ Before:
 
 After:
 
-![That same section after adding the block of concern]![The section before adding in the new device screen resolution block](/img/ssh/6.png)
+![That same section after adding the block of concern](/img/ssh/6.png)
 
 ## Step 3: Copy your device's bootloader firmware binaries:
 
