@@ -155,22 +155,22 @@ Then, open 7-Zip from the Start menu, then navigate to that folder:
 
 Then, right-click the biggest file, of type gzip, and select "Open Inside #". Make sure you select the correct Open Inside option, as the other ones won't work!  
 
-![7-Zip File Manager window after right-clicking on xbl.img, with "Open Inside #" highlighted](/img/0.png?raw=true)
+![7-Zip File Manager window after right-clicking on xbl.img, with "Open Inside #" highlighted](/img/1.png)
 
 Proceed with opening the subfiles as follows:
-![](/img/2.png?raw=true)
-![](/img/3.png?raw=true)
-![](/img/4.png?raw=true)
-![](/img/5.png?raw=true)
-![](/img/6.png?raw=true)
-![](/img/7.png?raw=true)
-![](/img/8.png?raw=true)
+![](/img/2.png)
+![](/img/3.png)
+![](/img/4.png)
+![](/img/5.png)
+![](/img/6.png)
+![](/img/7.png)
+![](/img/8.png)
   
 Finally, you will arrive at a file listing similar to the one below:
-![7-Zip File Manager window showing a listing of EFI bootloader files](/img/9_final.png?raw=true)
+![7-Zip File Manager window showing a listing of EFI bootloader files](/img/9_final.png)
 
 Extract it to a folder:
-![7-Zip File Manager extract dialog, destination is a new folder](/img/10.png?raw=true)
+![7-Zip File Manager extract dialog, destination is a new folder](/img/10.png)
 
 Then **copy that folder over to your Linux computer.**  
 Once they are copied, proceed to the next section.
