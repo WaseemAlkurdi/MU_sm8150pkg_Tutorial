@@ -1,6 +1,6 @@
 # Setting up the build environment
 
-First, make sure that you have installed the prerequisite packages. If not, consult the previous section for more details.
+First, make sure that you have installed the prerequisite packages. If not, consult [the previous section](2_Build_environment_setup.md) for more details.
 
 Now that we finally have the bootloader files needed for our device, let's prepare our Linux system for building UEFI firmware:
 

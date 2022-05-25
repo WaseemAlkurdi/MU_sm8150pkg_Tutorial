@@ -153,7 +153,7 @@ Then, open 7-Zip from the Start menu, then navigate to that folder:
 
 ![folder containing xbl.img open in 7-Zip File Manager on Windows](/img/0.png)
 
-Then, right-click the biggest file, of type gzip, and select "Open Inside #". Make sure you select the correct Open Inside option, as the other ones won't work!  
+Then, right-click `xbl.img`, and select "Open Inside #". Make sure you select the correct Open Inside option, as the other ones won't work!  
 
 ![7-Zip File Manager window after right-clicking on xbl.img, with "Open Inside #" highlighted](/img/1.png)
 
@@ -173,6 +173,6 @@ Extract it to a folder:
 ![7-Zip File Manager extract dialog, destination is a new folder](/img/10.png)
 
 Then **copy that folder over to your Linux computer.**  
-Once they are copied, [proceed to the next section](2_Build_environment_setup.md).
+Once it is copied, [proceed to the next section](2_Build_environment_setup.md).
 
 

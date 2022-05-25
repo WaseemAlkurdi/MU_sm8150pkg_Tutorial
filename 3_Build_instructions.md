@@ -90,15 +90,15 @@ LemonICE  XiaoMi
 (SurfaceDuo) $ mkdir -p Platforms/SurfaceDuoPkg/CustomizedBinaries/OnePlus/Guacamole_7_Pro
 ```
 
-Now, move the firmware files we extracted with 7-Zip to the folder we just created, keeping in mind the correct paths:
+Now, move the firmware binaries we extracted with 7-Zip to the folder we just created, keeping in mind the correct paths:
 
 ```bash
 (SurfaceDuo) $ mv /path/to/needed/files/* Platforms/SurfaceDuoPkg/CustomizedBinaries/OnePlus/Guacamole_7_Pro
 ```
 
-## Step 4: Configure the build system to process the firmware files for your device:
+## Step 4: Configure the build system to process the firmware binaries for your device:
 
-We will now need to inform the build system of these files. The files `DXE0.inc` through `DXE3.inc` tell the build system about the locations of these firmware files for each separate device. So, we will make a copy of one of these files and modify it with the correct paths for our own files.
+We will now need to inform the build system of these files. The files `DXE0.inc` through `DXE3.inc` tell the build system about the locations of these firmware binaries for each separate device. So, we will make a copy of one of these files and modify it with the correct paths for our own files.
 
 Let's copy it as follows:
 
