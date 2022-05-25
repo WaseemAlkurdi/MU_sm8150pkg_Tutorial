@@ -184,7 +184,7 @@ A quick way to do this is by highlighting the block with `Shift` + arrow keys, t
 
 Before:
 
-![ACPI.inc before commenting out the first block]((/img/ssh/9_before.png)
+![ACPI.inc before commenting out the first block](/img/ssh/9_before.png)
 
 After:
 
