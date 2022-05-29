@@ -1739,7 +1739,20 @@ $
 ```
 </details>
 
-Prepare the Python dependencies that the build will use:
+With that done, we will create and activate a virtual Python environment, also known as a `venv`.
+We need this in order to keep our host system clean and uncluttered with unnecessary libraries, by installing the Python libraries that the build needs in a separate "sandbox".
+To do that, we run these two commands:
+```bash
+$ python3 -m venv SurfaceDuo
+$ source SurfaceDuo/bin/activate
+```
+
+Your shell prompt (known as `PS1`) will now have `(SurfaceDuo)` prepended to indicate that we are in the correct virtual environment:
+```
+(SurfaceDuo) $
+```
+
+Now that we are in the virtual environment, we will download the Python dependencies that the build will use:
 ```bash
 $ pip install --upgrade -r pip-requirements.txt
 Collecting edk2-pytool-library~=0.10.8
@@ -1755,15 +1768,4 @@ Installing collected packages: edk2-pytool-library, pyyaml, edk2-pytool-extensio
 Successfully installed edk2-pytool-extensions-0.13.10 edk2-pytool-library-0.10.15 pyyaml-6.0
 ```
 
-Now, we will activate the virtual environment that the build needs with these two commands:
-```bash
-$ python3 -m venv SurfaceDuo
-$ source SurfaceDuo/bin/activate
-```
-
-Your shell prompt (known as `PS1`) will now have `(SurfaceDuo)` prepended to indicate that we are in the correct virtual environment:
-```
-(SurfaceDuo) $
-```
-
-Now, [let's add our device into the build system](3_Build_instructions.md).
+And we're all done! [Let's add our device into the build system](3_Build_instructions.md).
