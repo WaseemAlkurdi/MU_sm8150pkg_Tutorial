@@ -73,13 +73,20 @@ After:
 
 ![That same section after adding the block of concern](/img/ssh/6.png)
 
-## Step 3: Copy your device's bootloader firmware binaries:
+## Step 3: Copy your device's bootloader firmware binaries and Device Tree Blob:
 
 > Each device has its own **specific** firmware binaries, and **you need to add those in before building**.
 
 Remember the files we have obtained in the first step? **Time to put those to good use!**
 
-**First**, let's create an empty directory in which we will put those files:
+**First**, copy the Device Tree Blob (DTB) file, `fdt.dd` from the very first step of this guide, to the `ImageResources\dtbs` directory.
+**Make sure you change the filename `Guacamole.dtb` in the example below to reflect your own device's codename!**
+
+```
+(SurfaceDuo) $ cp /path/to/fdt.dd ImageResources/dtbs/Guacamole.dtb
+```
+
+Then, let's create an empty directory in which we will put the firmware binaries we extracted from the bootloader:
 (replace `DEVICE_MAKE` and `Codename_MODEL_NAME` accordingly - I will use `OnePlus/Guacamole_7_Pro`)
 
 ```bash
@@ -117,7 +124,7 @@ In `nano`, we will find the following string:
 SECTION PE32 = SurfaceDuoPkg/CustomizedBinaries/XiaoMi/Andromeda_MIX3_5G/
 ```
 
-and replace it after adding in the path for our own device's files:  
+and replace all occurrences of it after adding in the path for our own device's files:  
 
 ```
 SECTION PE32 = SurfaceDuoPkg/CustomizedBinaries/OnePlus/Guacamole_7_Pro/
@@ -606,6 +613,14 @@ PROGRESS - Success
 ```
 </details>
 
+Run this PowerShell script that will "stamp" our build:
+
+```
+(SurfaceDuo) $ pwsh ./build_releaseinfo.ps1
+Stamp build.
+(SurfaceDuo) $
+```
+**IMPORTANT: Not doing this step, will result in a cryptic error message about a missing file.**
 
 And finally, the moment of truth ... kickstart the build as follows:
 

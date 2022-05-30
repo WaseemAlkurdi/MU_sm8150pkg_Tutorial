@@ -4,7 +4,7 @@ The process overall is *surprisingly* simple, yet there are quite a few steps. O
 
 It is divided into four main parts:
 1. Installation of prerequisite packages
-2. Extraction of firmware binaries from the stock bootloader image
+2. Extraction of the device tree and firmware binaries
 3. Preparation of the build environment
 4. Adding the new device to the build system as a target (colloquially referred to as a bring-up)
 
@@ -30,9 +30,43 @@ To install these on Ubuntu, run the following command:
 $ sudo apt install git python abootimg
 ```
 
-# Extraction of required firmware binaries from the stock bootloader image
+# Extraction of required firmware binaries from the phone and the stock bootloader image
 
-The first thing that we'll be doing is extracting the bootloader, `XBL.img` , from the stock firmware image. 
+Our first stop will be extracting the Device Tree Blob (DTB) from the phone.
+
+On your rooted phone (in a terminal or using `adb shell`), run this command:
+
+```
+$ su
+# dd if=/sys/firmware/fdt of=/sdcard/fdt.dd
+```
+
+You will have a file, `fdt.dd`, that is less than 1 MB in size in the root of your internal storage. 
+Copy it to your computer, preferably using ADB, as MTP is flaky and may corrupt the file.
+
+```
+$ adb pull /sdcard/fdt.dd
+```
+
+Checking the file's hash is recommended.
+
+Keep this file aside for now - we will be using it later on.
+
+Know your device's **codename** - each model of Android device has a codename given to it by its engineers.
+This will help you with researching information about your device, and will also be used by the build process to refer to your specific phone.
+To find it out, run this command:
+
+```
+$ adb shell "getprop ro.product.device"
+guacamole
+$
+
+```
+
+This tells us that the codename for my OnePlus 7 Pro is `guacamole`. That's neat!
+Device manufacturers often follow an interesting theme with codenames: OnePlus uses food, and Google uses names of fish, while Xiaomi uses names of things like luxury watches and famous artists.
+
+**Next**, we will be extracting the bootloader, `XBL.img` , from the stock firmware image.
 
 A good, accessible write-up of what `XBL` (e**X**tensible **B**oot**L**oader) is, which describes in ample detail what it does and what it consists of, can be found here: http://worthdoingbadly.com/qcomxbl   
 
