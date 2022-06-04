@@ -207,6 +207,6 @@ Extract it to a folder:
 ![7-Zip File Manager extract dialog, destination is a new folder](/img/10.png)
 
 Then **copy that folder over to your Linux computer.**  
-Once it is copied, [proceed to the next section](2_Build_environment_setup.md).
+Once it is copied, [proceed to the next section](en/sm8150pkg/tutorial/2_Build_environment_setup.md).
 
 

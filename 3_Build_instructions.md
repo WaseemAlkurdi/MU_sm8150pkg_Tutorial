@@ -38,7 +38,7 @@ Find the `Build ID Tables` section of that file:
 
 ![A crop of the Nano editor view, showing the section of concern](/img/ssh/2.png)
 
-Add another row with your device's model and codename to the tail end of the table. In this instance, there are three devices, so my device (OnePlus 7 Pro / guacamole) will be the 4th device on that list:
+Add another row with your device's model and codename to the tail end of the table. In this instance, there are three devices, so my device (OnePlus 7 Pro / `guacamole` ) will be the 4th device on that list:
 
 ![The same section, after adding the new device block](/img/ssh/3.png)
 
@@ -80,6 +80,7 @@ After:
 Remember the files we have obtained in the first step? **Time to put those to good use!**
 
 **First**, copy the Device Tree Blob (DTB) file, `fdt.dd` from the very first step of this guide, to the `ImageResources\dtbs` directory.
+
 **Make sure you change the filename `Guacamole.dtb` in the example below to reflect your own device's codename!**
 
 ```
@@ -620,7 +621,7 @@ Run this PowerShell script that will "stamp" our build:
 Stamp build.
 (SurfaceDuo) $
 ```
-**IMPORTANT: Not doing this step, will result in a cryptic error message about a missing file.**
+**IMPORTANT: Not doing this step will result in a cryptic error message about a missing file.**
 
 And finally, the moment of truth ... kickstart the build as follows:
 

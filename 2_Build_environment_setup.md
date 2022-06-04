@@ -1,6 +1,6 @@
 # Setting up the build environment
 
-First, make sure that you have installed the prerequisite packages. If not, consult [the previous section](2_Build_environment_setup.md) for more details.
+First, make sure that you have installed the prerequisite packages. If not, consult [the previous section](en/sm8150pkg/tutorial/1_Prerequisites_Bootloader_binary_extraction.md) for more details.
 
 Now that we finally have the bootloader files needed for our device, let's prepare our Linux system for building UEFI firmware:
 
@@ -1768,4 +1768,4 @@ Installing collected packages: edk2-pytool-library, pyyaml, edk2-pytool-extensio
 Successfully installed edk2-pytool-extensions-0.13.10 edk2-pytool-library-0.10.15 pyyaml-6.0
 ```
 
-And we're all done! [Let's add our device into the build system](3_Build_instructions.md).
+And we're all done! [Let's add our device into the build system](en/sm8150pkg/tutorial/3_Build_instructions.md).
